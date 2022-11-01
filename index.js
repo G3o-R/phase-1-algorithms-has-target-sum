@@ -1,5 +1,17 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
+function hasTargetSum(array,target){
+  let  sums = []
+
+  console.log(`should be sorted ${array}`)
+  array.forEach((item) =>{
+    const complement = target - item
+   // console.log(`${complement}`)
+    if(array.indexOf(complement) > -1){
+       return sums.push(complement)
+      
+        
+  }})
+    if(sums.length >=2){return true}
+    else{return false}
 }
 
 /* 
